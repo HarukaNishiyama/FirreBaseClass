@@ -30,6 +30,10 @@
 		E91E15BD24DA513400332BB7 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E15BB24DA513400332BB7 /* HomeDetailViewController.xib */; };
 		E91E15C024DA515000332BB7 /* HomeDetailMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E15BE24DA515000332BB7 /* HomeDetailMainView.swift */; };
 		E91E15C124DA515000332BB7 /* HomeDetailMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E15BF24DA515000332BB7 /* HomeDetailMainView.xib */; };
+		E91E15C624DBACD200332BB7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E15C424DBACD200332BB7 /* EditViewController.swift */; };
+		E91E15C724DBACD200332BB7 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E15C524DBACD200332BB7 /* EditViewController.xib */; };
+		E91E15CA24DBACE500332BB7 /* EditMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E15C824DBACE500332BB7 /* EditMainView.swift */; };
+		E91E15CB24DBACE500332BB7 /* EditMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E15C924DBACE500332BB7 /* EditMainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		E91E15BB24DA513400332BB7 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		E91E15BE24DA515000332BB7 /* HomeDetailMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailMainView.swift; sourceTree = "<group>"; };
 		E91E15BF24DA515000332BB7 /* HomeDetailMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailMainView.xib; sourceTree = "<group>"; };
+		E91E15C424DBACD200332BB7 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E91E15C524DBACD200332BB7 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		E91E15C824DBACE500332BB7 /* EditMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMainView.swift; sourceTree = "<group>"; };
+		E91E15C924DBACE500332BB7 /* EditMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		E91E14E924D3C82F00332BB7 /* FireBaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				E91E15C324DBACBD00332BB7 /* Edit */,
 				E91E150124D3CC7700332BB7 /* Model */,
 				E91E150A24D3D37E00332BB7 /* Post */,
 				E91E150024D3CC6F00332BB7 /* Home */,
@@ -160,6 +169,17 @@
 				E91E15BF24DA515000332BB7 /* HomeDetailMainView.xib */,
 			);
 			path = HomeDetail;
+			sourceTree = "<group>";
+		};
+		E91E15C324DBACBD00332BB7 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E91E15C424DBACD200332BB7 /* EditViewController.swift */,
+				E91E15C524DBACD200332BB7 /* EditViewController.xib */,
+				E91E15C824DBACE500332BB7 /* EditMainView.swift */,
+				E91E15C924DBACE500332BB7 /* EditMainView.xib */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		FA4ABC26BD4C1EF9C705BF63 /* Pods */ = {
@@ -231,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91E15C724DBACD200332BB7 /* EditViewController.xib in Resources */,
 				E91E14F724D3C83100332BB7 /* LaunchScreen.storyboard in Resources */,
 				E91E14F424D3C83100332BB7 /* Assets.xcassets in Resources */,
 				E91E15BD24DA513400332BB7 /* HomeDetailViewController.xib in Resources */,
@@ -239,6 +260,7 @@
 				E91E150524D3CC8400332BB7 /* HomeViewController.xib in Resources */,
 				E91E14F224D3C82F00332BB7 /* Main.storyboard in Resources */,
 				E91E14FF24D3C85E00332BB7 /* GoogleService-Info.plist in Resources */,
+				E91E15CB24DBACE500332BB7 /* EditMainView.xib in Resources */,
 				E91E150E24D3D38B00332BB7 /* PostViewController.xib in Resources */,
 				E91E151224D3D5D000332BB7 /* PostMainView.xib in Resources */,
 				E91E15C124DA515000332BB7 /* HomeDetailMainView.xib in Resources */,
@@ -295,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91E15BC24DA513400332BB7 /* HomeDetailViewController.swift in Sources */,
+				E91E15CA24DBACE500332BB7 /* EditMainView.swift in Sources */,
 				E91E150D24D3D38B00332BB7 /* PostViewController.swift in Sources */,
 				E91E159F24D7AD4600332BB7 /* PostModel.swift in Sources */,
 				E91E14EF24D3C82F00332BB7 /* ViewController.swift in Sources */,
@@ -302,6 +325,7 @@
 				E91E151124D3D5D000332BB7 /* PostMainView.swift in Sources */,
 				E91E14ED24D3C82F00332BB7 /* SceneDelegate.swift in Sources */,
 				E91E150824D3CD5000332BB7 /* HomeMainView.swift in Sources */,
+				E91E15C624DBACD200332BB7 /* EditViewController.swift in Sources */,
 				E91E15C024DA515000332BB7 /* HomeDetailMainView.swift in Sources */,
 				E91E15B724D7F35400332BB7 /* HomeMainViewCell.swift in Sources */,
 				E91E150424D3CC8400332BB7 /* HomeViewController.swift in Sources */,

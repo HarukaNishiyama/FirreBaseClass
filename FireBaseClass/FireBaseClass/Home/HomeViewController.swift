@@ -52,11 +52,20 @@ extension HomeViewController: HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
 }
+extension HomeViewController: HomeMainViewDelegate {
+    func didSelectRowAt(indexPath: IndexPath) {
+        let homeDetailVIewController = HomeDetailViewController()
+        navigationController?.pushViewController(homeDetailVIewController, animated: true)
+        homeDetailVIewController.postModel = postModels[indexPath.row]
+        animatorManager.navigationType = .slide_push
+    }
+}
 
 // MARK: - method
 extension HomeViewController {
     func setHeaderDelegate() {
         topHeaderView.delegate = self
+        mainView.delegate = self
     }
     func setHeaderDesign() {
         topHeaderView.setCenter(text: "Home")

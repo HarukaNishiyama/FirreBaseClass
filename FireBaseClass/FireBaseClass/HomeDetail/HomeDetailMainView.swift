@@ -17,6 +17,10 @@ extension HomeDetailMainViewDelegate {
 
 // MARK: - Property
 class HomeDetailMainView: BaseView {
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var iconNameLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var discriptionLabel: UILabel!
     weak var delegate: HomeDetailMainViewDelegate? = nil
 }
 
@@ -24,6 +28,7 @@ class HomeDetailMainView: BaseView {
 extension HomeDetailMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageDesign()
     }
 }
 
@@ -33,4 +38,10 @@ extension HomeDetailMainView {
 
 // MARK: - method
 extension HomeDetailMainView {
+    func imageDesign() {
+        iconImage.layer.cornerRadius = iconImage.frame.width / 2
+    }
+    func getModel(postModel: PostModel) {
+        discriptionLabel.text = postModel.description
+    }
 }

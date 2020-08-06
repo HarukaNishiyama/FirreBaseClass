@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class PostModel {
+    fileprivate static let PATH: String = "post"
     var id: String = String()
     var image_path: String? //投稿画像のパス
     var description: String? //投稿文
@@ -39,7 +40,7 @@ extension PostModel {
 //MARK: - Create
 extension PostModel {
     static func create(request: PostModel, success:@escaping () -> Void) {
-        let dbRef = Database.database().reference().child("post").childByAutoId()
+        let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key {
             request.id = key
         }
@@ -53,7 +54,7 @@ extension PostModel {
 extension PostModel {
     static func reads(success: @escaping ([PostModel]) -> Void) {
         // インスタンス生成
-        let dbRef = Database.database().reference().child("post")
+        let dbRef = Database.database().reference().child(PATH)
         dbRef.observe(.value) { (snapshot) in
             var models: [PostModel] = [PostModel]()
             // スナップショットをitemに入れていく
@@ -70,7 +71,18 @@ extension PostModel {
 
 //MARK: - Update
 extension PostModel {
-    
+    static func update(request: PostModel, success:@escaping () -> Void) {
+        let id = request.id
+        let dbRef = Database.database().reference().child(PATH).child(id)
+        let parameter = setParameter(request: request)
+        dbRef.updateChildValues(parameter) { (error, dbRef) in
+            if error != nil {
+                print("updateエラー：", error)
+            } else {
+                success()
+            }
+        }
+    }
 }
 
 //MARK: - Delete
