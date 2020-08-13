@@ -9,7 +9,7 @@ target 'FireBaseClass' do
   pod 'Alamofire', '~> 4.9.1'
   pod 'Firebase'
   pod 'Firebase/Database'
-
+  pod 'Firebase/Storage'
   # Pods for FireBaseClass
 
 end

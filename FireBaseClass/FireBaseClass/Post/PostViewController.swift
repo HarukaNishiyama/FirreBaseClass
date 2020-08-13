@@ -19,16 +19,20 @@ class PostViewController: BaseViewController {
 extension PostViewController {
     override func loadView() {
         super.loadView()
-        postHeaderView.delegate = self
+        setDelegate()
         setHeader()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            postMainVIew.photoImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -48,9 +52,18 @@ extension PostViewController: HeaderViewDelegate {
         }
     }
 }
+extension PostViewController: PostMainViewDelegate {
+    func touchAddButton() {
+        useCamera()
+    }
+}
 
 // MARK: - method
 extension PostViewController {
+    func setDelegate() {
+        postMainVIew.delegate = self
+        postHeaderView.delegate = self
+    }
     func setHeader() {
         postHeaderView.setCenter(text: "新規投稿")
         postHeaderView.setLeft(text: "キャンセル")

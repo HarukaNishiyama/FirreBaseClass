@@ -31,6 +31,7 @@ extension HomeDetailViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         giveModel()
+        getModel()
     }
 }
 
@@ -60,5 +61,14 @@ extension HomeDetailViewController {
     }
     func giveModel() {
         mainView.getModel(postModel: postModel)
+    }
+    func getModel() {
+        PostModel.readAt(id: postModel.id, success: { (postModel) in
+            self.postModel = postModel
+            self.giveModel()
+        }) {
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .slide_pop
+        }
     }
 }

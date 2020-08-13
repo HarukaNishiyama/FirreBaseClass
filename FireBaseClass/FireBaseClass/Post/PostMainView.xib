@@ -27,16 +27,28 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRk-f7-gTE">
+                    <rect key="frame" x="188" y="150" width="38" height="57"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                    <state key="normal" title="＋">
+                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </state>
+                    <connections>
+                        <action selector="touchAddButton:" destination="-1" eventType="touchUpInside" id="7uM-9b-LGv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="MzR-py-OiX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Xp-jd-MoR"/>
                 <constraint firstItem="ClH-k7-VSF" firstAttribute="top" secondItem="MzR-py-OiX" secondAttribute="bottom" constant="30" id="5Zw-05-yro"/>
                 <constraint firstItem="ClH-k7-VSF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="RGl-Gt-2wZ"/>
+                <constraint firstItem="WRk-f7-gTE" firstAttribute="centerX" secondItem="MzR-py-OiX" secondAttribute="centerX" id="VZf-8B-d6y"/>
                 <constraint firstItem="MzR-py-OiX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XSI-n9-vwF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MzR-py-OiX" secondAttribute="trailing" id="a6G-yx-QI5"/>
                 <constraint firstItem="MzR-py-OiX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="faS-vn-33r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ClH-k7-VSF" secondAttribute="trailing" constant="40" id="flb-lZ-SI1"/>
+                <constraint firstItem="WRk-f7-gTE" firstAttribute="centerY" secondItem="MzR-py-OiX" secondAttribute="centerY" id="tMW-py-DEg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="93"/>

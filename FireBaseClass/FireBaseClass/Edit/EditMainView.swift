@@ -10,6 +10,7 @@ import UIKit
 import PGFramework
 
 protocol EditMainViewDelegate: NSObjectProtocol{
+    func touchDeleteButton()
 }
 
 extension EditMainViewDelegate {
@@ -41,5 +42,10 @@ extension EditMainView {
     }
     func update(postModel: PostModel) {
         editTextView.text = postModel.description
+    }
+    @IBAction func touchDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchDeleteButton()
+        }
     }
 }

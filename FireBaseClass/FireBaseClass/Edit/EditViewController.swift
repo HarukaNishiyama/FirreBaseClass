@@ -46,11 +46,18 @@ extension EditViewController: HeaderViewDelegate {
         }
     }
 }
-
+extension EditViewController: EditMainViewDelegate {
+    func touchDeleteButton() {
+        PostModel.delete(id: postModel.id) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+}
 // MARK: - method
 extension EditViewController {
     func setDelegate() {
         headerView.delegate = self
+        mainView.delegate = self
     }
     func setDesign() {
         headerView.setCenter(text: "投稿編集画面")

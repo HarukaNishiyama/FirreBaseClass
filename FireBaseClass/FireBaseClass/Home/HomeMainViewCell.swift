@@ -47,5 +47,11 @@ extension HomeMainViewCell {
     }
     func updateCell(postModel: PostModel) {
         postLable.text = postModel.description
+        guard let image_path = postModel.image_paths?[0] else {
+            return
+        }
+        if let url = URL(string: image_path) {
+            photoImage.af_setImage(withURL: url)
+        }
     }
 }
